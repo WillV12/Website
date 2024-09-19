@@ -10,10 +10,10 @@
     /* Create function that concatenates array into 
     a sentence (adding spaces between words), and 
     outputs the result to '<p id="output"><p>' innerHTML */
-        function sentence(array){
+        function sentence(){
             let line = '';
-            for (let i = 0; i < array.length; i++){
-                line = line + array[i] + " "
+            for (let i = 0; i < words.length; i++){
+                line = line + words[i] + " "
             }
             let result = document.getElementById('output')
             result.innerHTML = line
@@ -21,7 +21,7 @@
     /* Add an event listener to generateBtn.
     When clicked, the generateBtn should execute 
     the generateSentence function, displaying the sentence. */
-    document.getElementById('generateBtn').addEventListener('click', sentence(words))
+    generateBtn.addEventListener('click', sentence)
 </script>
 </body>
 </html>
